@@ -118,3 +118,20 @@ const age = calculateAge(birthdate);
 
 // عرض العمر داخل عنصر <b>
 document.querySelector('b').textContent = age;
+function openModal() {
+    document.getElementById("imageModal").style.display = "flex";
+    document.getElementById("modalImage").src = "./images/myphoto_1.jpeg";
+  }
+  
+  // إغلاق المودال
+  function closeModal() {
+    document.getElementById("imageModal").style.display = "none";
+  }
+  
+  // إغلاق المودال عند النقر خارج الصورة
+  window.onclick = function(event) {
+    const modal = document.getElementById("imageModal");
+    if (event.target === modal) {
+      closeModal();
+    }
+  }
