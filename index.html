@@ -16,7 +16,8 @@
     <meta name="og:locale" content="en">
     <title>𝓜𝔂 𝓟𝓻𝓸𝓯𝓲𝓵𝓮</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
-   <link rel="stylesheet" href="styles/styles.css">
+    
+      <link rel="stylesheet" href="styles/styles.css">
 </head>
 <body>
     <div class="container">
@@ -28,14 +29,23 @@
         </div>
 
         <header>
-            <img src="images/myphoto_1.jpeg" alt="Profile Picture" class="profile-img">
-            <br>
+            <section id="about">
+            
+                <div class="about-content">
+                  <!-- أضفنا onclick هنا -->
+                  <img src="./images/myphoto_1.jpeg" alt="صورة شخصية" onclick="openModal()" class="profile-img">
+                  <div class="about-text">
+                    <!-- المحتوى النصي -->
+                  </div>
+                </div>
+              </section>  
+                     
             <h1>
-                <a  href="#" class="typewrite" data-period="2000" data-type='[ "Hi , I am Ahmed ELsaman.",  "I Love Design.", "I Love to Develop." ]'>
+                <a class="typewrite" data-period="2000" data-type='[ "Hi , I am Ahmed ELsaman.",  "I Love Design.", "I Love to Develop." ]'>
                   <span class="wrap"></span>
                 </a>
               </h1>
-            <p data-i18n="bio">𝚂𝚘𝚏𝚝𝚠𝚊𝚛𝚎 𝙴𝚗𝚐𝚒𝚗𝚎𝚎𝚛 | 𝙵𝙲𝙸 - 𝚂𝚅𝚄 | 𝚆𝙴𝙱 𝙳𝚎𝚟𝚎𝚕𝚘𝚙𝚎𝚛</p>
+            <p data-i18n="bio">𝖢𝗈𝗆𝗉𝗎𝗍𝖾𝗋 𝖤𝗇𝗀𝗂𝗇𝖾𝖾𝗋 | 𝖥𝖢𝖨 - 𝖲𝖵𝖴 | 𝖶𝖤𝖡 𝖣𝖾𝗏𝖾𝗅𝗈𝗉𝖾𝗋</p>
         </header>
 
         <button id="toggleButton" data-i18n="moreInfo">
@@ -60,6 +70,7 @@
                    
                     <span data-i18n="status"> <i class="fas fa-heart"></i> Status: Single</span>
                 </div>
+                
             </div>
         </div>
         <br>
@@ -70,7 +81,7 @@
                 <span data-i18n="phone">Call Me : +201016715930</span>
                 <i style="position: fixed; right: 35px ;" class="fa fa-arrow-right"></i>
             </a>
-            <a href="https://wa.me/201016715930?text=Hi%20Ahmed" target="_blank" class="link">
+            <a href="https://wa.me/201016715930?text=%D8%A7%D9%84%D8%B3%D9%84%D8%A7%D9%85%20%D8%B9%D9%84%D9%8A%D9%83%D9%85" target="_blank" class="link">
                 <i class="fab fa-whatsapp"></i>
                 <span data-i18n="whatsapp">Whatsapp</span>
                 <i style="position: fixed; right: 35px ;" class="fa fa-arrow-right"></i>
@@ -140,7 +151,10 @@
                 </div>
         
     </div>
-
+    <div id="imageModal" class="modal">
+        <span class="close" onclick="closeModal()">&times;</span>
+        <img class="modal-content" id="modalImage">
+      </div> 
     <script src="javascript/script.js"></script>
 </body>
 </html>
