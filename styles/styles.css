@@ -35,7 +35,7 @@
     }
     .social-icon {
         color: #000000e5;
-        background-color: cornsilk;
+        background-color: var(--card-bg);
         box-shadow: 0 5px 20px rgba(0, 0, 0, 0.3);
 
     }
@@ -384,7 +384,7 @@ transform: scale(1);
 
 /* تدرج لوني للروابط */
 .link {
-    animation: slideInLeft 0.5s ease-in-out;
+animation: slideInLeft 0.5s ease-in-out;
 background: linear-gradient(
 to right,
 var(--card-bg) 50%,
@@ -407,6 +407,12 @@ transition: all 0.5s ease;
 .link:hover {
 background-position: left bottom;
 }
+ .fa-arrow-right {
+   
+    transition:none !important;
+  
+}
+
 .social-icon {
     display: inline-flex; 
     justify-content: center;
@@ -445,9 +451,66 @@ color:  blue;
             }
 #Copy-Rights{
 
-      font-size: 15px;
-      color: rgba(220, 255, 245, 0.829); 
+      font-size: 14px;
+      color: rgba(240, 245, 243, 0.829); 
       margin-top: 5px;
       font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
      
 }
+
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 9999;
+    padding-top: 100px;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0,0,0,0.9);
+    animation: fadeIn 0.3s;
+  }
+  
+  .modal-content {
+    margin: auto;
+    display: block;
+    width: 80%;
+    max-width: 700px;
+    border-radius: 50%;
+    animation: zoom 0.3s;
+  }
+  
+  .profile-img {
+    cursor: pointer;
+    transition: transform 0.3s;
+  }
+  
+  .profile-img:hover {
+    transform: scale(1.05);
+  }
+  
+  .close {
+    position: absolute;
+    top: 15px;
+    right: 35px;
+    color: #fff;
+    font-size: 40px;
+    font-weight: bold;
+    transition: 0.3s;
+    cursor: pointer;
+  }
+  
+  .close:hover {
+    color: #ff6f61;
+  }
+  
+  @keyframes zoom {
+    from {transform: scale(0.5)}
+    to {transform: scale(1)}
+  }
+  
+  @keyframes fadeIn {
+    from {opacity: 0}
+    to {opacity: 1}
+  }
