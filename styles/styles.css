@@ -444,7 +444,18 @@ color:  #316FF6;
     color:  #CD201F;
     }
     #instagram:hover{
-        color: #C13584;
+        color: linear-gradient(
+                45deg,
+                #405DE6 0%, 
+                #833AB4 25%, 
+                #C13584 50%, 
+                #E1306C 75%, 
+                #FD1D1D 80%, 
+                #F56040 100%
+            );
+            background-clip: text;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
         }
        #x:hover{
             color: rgb(255, 255, 255);
