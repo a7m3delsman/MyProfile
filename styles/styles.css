@@ -438,13 +438,13 @@ background-position: left bottom;
 }
 
 #facebook:hover{
-color:  blue;
+color:  #316FF6;
 }
 #youtube:hover{
-    color:  rgb(245, 11, 11);
+    color:  #CD201F;
     }
     #instagram:hover{
-        color: rgb(227, 0, 235);
+        color: #C13584;
         }
        #x:hover{
             color: rgb(255, 255, 255);
